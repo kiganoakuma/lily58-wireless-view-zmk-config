@@ -51,6 +51,22 @@
             require-prior-idle-ms = <100>;
             layers = <0 1 2>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <31 32>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+            layers = <0 2 1>;
+        };
+
+        pss {
+            bindings = <&venv>;
+            key-positions = <13 14 15 16 19 20 21 22>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <500>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -62,7 +78,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             hold-trigger-on-release;
         };
@@ -75,9 +91,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
+        };
+    };
+
+    macros {
+        venv: venv {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp H &kp SPACE &kp H &kp O &kp W &kp SPACE &kp T &kp H &kp E &kp SPACE &kp T &kp U &kp R &kp N &kp SPACE &kp T &kp A &kp B &kp L &kp E &kp S>;
+            label = "VENV";
         };
     };
 
