@@ -127,7 +127,7 @@
 &kp TAB     &kp Q                &kp W              &kp E         &kp R             &kp T                                  &kp Y      &kp U             &kp I         &kp O               &kp P                         &kp BACKSLASH
 &kp ESCAPE  &hmr LEFT_CONTROL A  &hmr LEFT_SHIFT S  &hmr RMETA D  &hmr LEFT_ALT F   &kp G                                  &kp H      &hml RIGHT_ALT J  &hml RMETA K  &hml RIGHT_SHIFT L  &hml RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z                &kp X              &kp C         &kp V             &kp B      &kp LBKT    &kp RBKT        &kp N      &kp M             &kp COMMA     &kp DOT             &kp FSLH                      &kp GRAVE
-                                                    &kp LALT      &kp LEFT_CONTROL  &kp RMETA  &mo 2       &kp LEFT_SHIFT  &kp SPACE  &mo 1             &kp RGUI
+                                                    &kp LALT      &kp LEFT_CONTROL  &kp RMETA  &mo 1       &kp LEFT_SHIFT  &kp SPACE  &mo 2             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
