@@ -70,20 +70,6 @@
     };
 
     behaviors {
-        hmr: hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
-            hold-trigger-on-release;
-            require-prior-idle-ms = <200>;
-        };
-
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -93,9 +79,23 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <127>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <117>;
         };
     };
 
@@ -125,7 +125,7 @@
             bindings = <
 &kp ESC     &kp N1               &kp N2             &kp N3        &kp N4            &kp N5                                 &kp N6     &kp N7            &kp N8        &kp N9              &kp N0                        &kp BACKSPACE
 &kp TAB     &kp Q                &kp W              &kp E         &kp R             &kp T                                  &kp Y      &kp U             &kp I         &kp O               &kp P                         &kp BACKSLASH
-&kp ESCAPE  &hmr LEFT_CONTROL A  &hmr LEFT_SHIFT S  &hmr RMETA D  &hmr LEFT_ALT F   &kp G                                  &kp H      &hml RIGHT_ALT J  &hml RMETA K  &hml RIGHT_SHIFT L  &hml RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml RMETA D  &hml LEFT_ALT F   &kp G                                  &kp H      &hmr RIGHT_ALT J  &hmr RMETA K  &hmr RIGHT_SHIFT L  &hmr RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z                &kp X              &kp C         &kp V             &kp B      &kp LBKT    &kp RBKT        &kp N      &kp M             &kp COMMA     &kp DOT             &kp FSLH                      &kp GRAVE
                                                     &kp LALT      &kp LEFT_CONTROL  &kp RMETA  &mo 1       &kp LEFT_SHIFT  &kp SPACE  &mo 2             &kp RGUI
             >;
