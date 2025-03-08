@@ -112,7 +112,7 @@
         venv_sys: venv_sys {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp D &kp E &kp V &kp I &kp L &kp UNDER &kp B &kp L &kp O &kp O &kp D &kp UNDER &kp C &kp O &kp N &kp T &kp R &kp A &kp C &kp T &kp UNDER &kp F &kp I &kp G &kp H &kp T &kp ENTER>;
+            bindings = <&kp D &kp E &kp V &kp I &kp L &kp MINUS &kp B &kp L &kp O &kp O &kp D &kp MINUS &kp C &kp O &kp N &kp T &kp R &kp A &kp C &kp T &kp MINUS &kp F &kp I &kp G &kp H &kp T &kp RETURN>;
             label = "VENV_SYS";
         };
     };
